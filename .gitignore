@@ -1,2 +1,25 @@
 /models
 /videos
+
+# Python and virtual environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local study data (raw identifiable logs should never be tracked)
+logs/raw/
+logs/analysis/
+logs/archive/
+logs/*.txt
+logs/*.csv
+!logs/samples/
+!logs/samples/anonymized_posture_sample.csv
+!logs/README.md
+
+# Questionnaire local tooling and responses
+questionnaire/.obsidian/
+questionnaire/*_responses.md
+
+# Large local artifacts
+*.zip

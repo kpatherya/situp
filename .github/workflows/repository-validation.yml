@@ -1,0 +1,33 @@
+name: Repository validation
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  static-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Verify syntax for core scripts
+        run: |
+          python -m py_compile front/front-detector.py
+          python -m py_compile side/side-logging.py
+          python -m py_compile stream/data-stream.py
+          python -m py_compile analysis/stats.py
+
+      - name: Ensure identifiable response files are not tracked
+        run: |
+          if git ls-files | grep -E 'questionnaire/.+_responses\.md|logs/analysis/|logs/archive/'; then
+            echo 'Identifiable study files detected in tracked set.'
+            exit 1
+          fi

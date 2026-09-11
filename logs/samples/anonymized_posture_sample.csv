@@ -1,0 +1,9 @@
+participant_id,session_group,timestamp_offset_s,bad_posture_flag,back_angle_deg
+P001,active,0,0,13.2
+P001,active,5,1,24.8
+P001,active,10,1,27.1
+P001,active,15,0,14.6
+P002,control,0,0,11.9
+P002,control,5,0,12.7
+P002,control,10,1,22.3
+P002,control,15,1,25.4
