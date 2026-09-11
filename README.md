@@ -6,6 +6,18 @@ actuation experiments.
 
 Project metadata: [CONTRIBUTING.md](CONTRIBUTING.md) · [DATA_POLICY.md](DATA_POLICY.md) · [CITATION.cff](CITATION.cff) · [LICENSE](LICENSE)
 
+**Project page:** [kausarpatherya.com](https://kausarpatherya.com/projects/situp/index.html) ·
+**Write-up:** [SIT-UP: posture and HRI](https://kausarpatherya.com/2024/12/09/situp-posture-hri/index.html) ·
+**Demo video:** [YouTube](https://www.youtube.com/watch?v=W3mUOfoK-hg)
+
+**Status:** course-scale research prototype, not an active research thrust and
+not a paper project. It is included publicly as human-centered sensing
+evidence: a working multi-camera capture and posture-signal pipeline plus
+intervention experiments. Kausar Patherya built the front- and side-camera
+posture detection and logging pipelines, the streaming/orchestration layer, the
+analysis scripts, and the vibration and desk-actuation intervention prototypes.
+See [DATA_POLICY.md](DATA_POLICY.md) for how study artifacts are handled.
+
 ## Repository Layout
 
 - `front/`: front-camera detection experiments.
